@@ -40,8 +40,7 @@ const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number, dur
   return <span ref={countRef}>{count.toLocaleString()}{suffix}</span>;
 };
 
-const BG_VIDEO =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_131941_d136af49-e243-493a-be14-6ff3f24e09e6.mp4';
+const BG_VIDEO = '/banner1.mp4';
 
 export default function Home() {
   const featuredProducts = [
