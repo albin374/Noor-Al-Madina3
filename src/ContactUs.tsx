@@ -71,7 +71,7 @@ export default function ContactUs() {
                 </div>
                 <div>
                   <h4 className="text-[#1f2a1d] font-semibold mb-1">Office Address</h4>
-                  <p className="text-[#4b5b47]">Office 1204, Business Bay<br/>Dubai, United Arab Emirates</p>
+                  <p className="text-[#4b5b47]">Dubai, United Arab Emirates</p>
                 </div>
               </div>
             </div>
@@ -84,16 +84,16 @@ export default function ContactUs() {
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="firstName" className="text-sm font-medium text-[#1f2a1d]">First Name</label>
-                  <input type="text" id="firstName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" placeholder="John" />
+                  <input type="text" id="firstName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="lastName" className="text-sm font-medium text-[#1f2a1d]">Last Name</label>
-                  <input type="text" id="lastName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" placeholder="Doe" />
+                  <input type="text" id="lastName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="text-sm font-medium text-[#1f2a1d]">Email Address</label>
-                <input type="email" id="email" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" placeholder="john@example.com" />
+                <input type="email" id="email" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="subject" className="text-sm font-medium text-[#1f2a1d]">Subject</label>
@@ -115,7 +115,7 @@ export default function ContactUs() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 pb-16 sm:pb-24">
         <div className="w-full h-[400px] sm:h-[500px] bg-gray-200 rounded-3xl overflow-hidden shadow-lg border border-[#2d3a2a]/5">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14441.716499824647!2d55.26359550965005!3d25.1887309658742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682829c85c07%3A0x80ea3858365543ef!2sBusiness%20Bay%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+            src="https://maps.google.com/maps?q=Dubai,%20United%20Arab%20Emirates&t=&z=11&ie=UTF8&iwloc=&output=embed"
             width="100%" 
             height="100%" 
             style={{ border: 0 }} 
