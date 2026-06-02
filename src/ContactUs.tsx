@@ -84,16 +84,16 @@ export default function ContactUs() {
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="firstName" className="text-sm font-medium text-[#1f2a1d]">First Name</label>
-                  <input type="text" id="firstName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" />
+                  <input type="text" id="firstName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" placeholder="Enter first name" />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label htmlFor="lastName" className="text-sm font-medium text-[#1f2a1d]">Last Name</label>
-                  <input type="text" id="lastName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" />
+                  <input type="text" id="lastName" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" placeholder="Enter last name" />
                 </div>
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="email" className="text-sm font-medium text-[#1f2a1d]">Email Address</label>
-                <input type="email" id="email" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" />
+                <input type="email" id="email" className="bg-[#f8faf8] border border-[#2d3a2a]/10 rounded-xl px-4 py-3 text-[#1f2a1d] focus:outline-none focus:border-[#85AB8B] focus:ring-1 focus:ring-[#85AB8B] transition-all" placeholder="Enter email address" />
               </div>
               <div className="flex flex-col gap-2">
                 <label htmlFor="subject" className="text-sm font-medium text-[#1f2a1d]">Subject</label>
