@@ -67,15 +67,15 @@ export default function Home() {
         <BoomerangVideoBg src={BG_VIDEO} className="absolute inset-0 w-full h-full" />
         <div className="relative z-10 flex flex-col items-center justify-center min-h-[100dvh] sm:min-h-0 sm:h-full text-center px-4 sm:px-6">
           <h1
-            className="font-normal leading-[0.95] text-[#336443] text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.75rem] xl:text-[5.25rem] max-w-5xl"
+            className="font-normal leading-[0.95] text-white drop-shadow-md text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.75rem] xl:text-[5.25rem] max-w-5xl"
             style={{ fontFamily: '"Neue Haas Grotesk Display Pro 55 Roman", "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif', letterSpacing: '-0.035em' }}
           >
             Where Plastic Meets{' '}
-            <span className="text-[#85AB8B]">
+            <span className="text-[#D4AF37]">
               Sustainability
             </span>
           </h1>
-          <p className="mt-6 sm:mt-8 text-[#4b5b47] text-sm sm:text-base md:text-lg leading-relaxed max-w-md px-2">
+          <p className="mt-6 sm:mt-8 text-white/90 drop-shadow-md font-medium text-sm sm:text-base md:text-lg leading-relaxed max-w-md px-2">
             Premium-grade materials. Trusted networks. Deals that deliver.
           </p>
         </div>

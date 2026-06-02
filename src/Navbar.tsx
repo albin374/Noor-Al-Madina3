@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav className={`absolute top-0 left-0 right-0 z-30 flex items-center px-4 sm:px-6 md:px-10 py-6`}>
         {/* LOGO */}
         <div className="flex-1 flex justify-start">
-          <Link to="/" className="flex items-center group z-40">
+          <Link to="/" className={`flex items-center group z-40 transition-opacity duration-300 ${menuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
             <span className="font-bold text-2xl tracking-tight text-[#D4AF37] drop-shadow-sm hover:text-[#e0c058] transition-colors duration-300" style={{ fontFamily: '"Neue Haas Grotesk Display Pro 55 Roman", sans-serif', letterSpacing: '-0.02em' }}>
               Noor Al Madina
             </span>
