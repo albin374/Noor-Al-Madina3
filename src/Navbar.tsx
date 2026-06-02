@@ -27,13 +27,15 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`absolute top-0 left-0 right-0 z-30 flex items-center justify-between px-4 sm:px-6 md:px-10 py-6`}>
+      <nav className={`absolute top-0 left-0 right-0 z-30 flex items-center px-4 sm:px-6 md:px-10 py-6`}>
         {/* LOGO */}
-        <Link to="/" className="flex items-center group z-40">
-          <span className="font-bold text-2xl tracking-tight text-[#D4AF37] drop-shadow-sm hover:text-[#e0c058] transition-colors duration-300" style={{ fontFamily: '"Neue Haas Grotesk Display Pro 55 Roman", sans-serif', letterSpacing: '-0.02em' }}>
-            Noor Al Madina
-          </span>
-        </Link>
+        <div className="flex-1 flex justify-start">
+          <Link to="/" className="flex items-center group z-40">
+            <span className="font-bold text-2xl tracking-tight text-[#D4AF37] drop-shadow-sm hover:text-[#e0c058] transition-colors duration-300" style={{ fontFamily: '"Neue Haas Grotesk Display Pro 55 Roman", sans-serif', letterSpacing: '-0.02em' }}>
+              Noor Al Madina
+            </span>
+          </Link>
+        </div>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-2 bg-white/95 backdrop-blur-md rounded-full pl-8 pr-2 py-2 shadow-lg border border-[#2d3a2a]/5">
@@ -54,15 +56,15 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <Link to="/contact" className="ml-2 bg-[#1f2a1d] hover:bg-[#2a3827] text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors inline-block">
+          <Link to="/contact" className="ml-2 bg-[#1f2a1d] hover:bg-[#2a3827] text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors inline-block whitespace-nowrap">
             Contact Us
           </Link>
         </div>
 
-        <div className="flex items-center gap-3 sm:gap-6 text-[#2d3a2a]">
+        <div className="flex-1 flex items-center justify-end text-[#2d3a2a]">
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="lg:hidden relative flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-white/60 text-[#1f2a1d] transition-all duration-300 hover:bg-white/90"
+            className="lg:hidden relative flex items-center justify-center w-10 h-10 rounded-full bg-white/70 backdrop-blur-md border border-white/60 text-[#1f2a1d] transition-all duration-300 hover:bg-white/90 z-40"
           >
             <Menu className={`w-5 h-5 absolute transition-all duration-300 ${menuOpen ? 'opacity-0 rotate-90 scale-50' : 'opacity-100 rotate-0 scale-100'}`} />
             <X className={`w-5 h-5 absolute transition-all duration-300 ${menuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-50'}`} />
