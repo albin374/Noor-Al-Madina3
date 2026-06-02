@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`absolute top-0 left-0 right-0 z-30 flex items-center justify-center gap-4 lg:gap-8 px-4 sm:px-6 md:px-10 py-6`}>
+      <nav className={`absolute top-0 left-0 right-0 z-30 flex items-center justify-end lg:justify-center gap-4 lg:gap-8 px-4 sm:px-6 md:px-10 py-6`}>
         <div className="hidden lg:flex items-center gap-2 bg-white rounded-full pl-8 pr-2 py-2 shadow-lg">
           {navLinks.map((link, i) => (
             link.href.startsWith('/') ? 

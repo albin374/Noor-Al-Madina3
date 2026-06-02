@@ -151,7 +151,51 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      {/* Certifications & Compliance Section */}
+      <section className="relative w-full py-24 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&q=80&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Certifications Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#0f150e]/95" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-sm font-semibold tracking-widest text-[#85AB8B] uppercase mb-4">Certifications & Compliance</h2>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white leading-tight mb-6" style={{ letterSpacing: '-0.02em' }}>
+              Built on global credibility
+            </h3>
+            <p className="text-white/70 text-lg">
+              We adhere to the highest international standards to guarantee quality, sustainability, and safety across our entire supply chain.
+            </p>
+          </div>
+          
+          <div className="flex flex-col lg:flex-row h-[700px] lg:h-[450px] gap-4 w-full">
+            {[
+              { title: "ISO Certifications", img: "https://images.unsplash.com/photo-1700727448575-6f1680cd7d75?w=800&q=80&auto=format&fit=crop&ixlib=rb-4.1.0", icon: "🏅", desc: "Internationally recognized standards for business operations." },
+              { title: "Quality Standards", img: "https://images.unsplash.com/photo-1567613747256-9f97205d23d2?w=800&q=80&auto=format&fit=crop&ixlib=rb-4.1.0", icon: "✅", desc: "Rigorous lab testing and material inspections." },
+              { title: "Eco Compliance", img: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80&auto=format&fit=crop&ixlib=rb-4.1.0", icon: "🌿", desc: "Strict adherence to global environmental regulations." },
+              { title: "Safety Protocol", img: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80&auto=format&fit=crop&ixlib=rb-4.1.0", icon: "🦺", desc: "Uncompromising safety standards for all personnel." }
+            ].map((cert, i) => (
+              <div key={i} className="group relative flex-1 hover:flex-[2] lg:hover:flex-[3] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] rounded-3xl overflow-hidden cursor-pointer shadow-lg border border-white/5">
+                <img src={cert.img} alt={cert.title} className="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f150e] via-[#0f150e]/50 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700" />
+                
+                <div className="absolute bottom-0 left-0 p-6 lg:p-8 flex flex-col justify-end h-full">
+                  <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-2xl mb-4 group-hover:-translate-y-2 transition-transform duration-500 border border-white/20">
+                    {cert.icon}
+                  </div>
+                  <h4 className="text-white font-semibold text-xl lg:text-2xl mb-2 whitespace-nowrap">{cert.title}</h4>
+                  <div className="overflow-hidden max-h-0 lg:max-w-0 group-hover:max-h-24 lg:group-hover:max-w-[300px] transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                    <p className="text-white/80 text-sm mt-2 line-clamp-2">
+                      {cert.desc}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Testimonials Section */}
       <section className="relative w-full bg-[#f8faf8] py-24 sm:py-32 overflow-hidden border-t border-[#2d3a2a]/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 mb-16 text-center">
@@ -167,7 +211,7 @@ export default function Home() {
           <div className="absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#f8faf8] to-transparent z-10 pointer-events-none" />
 
           {/* Marquee Row 1 (Right to Left) */}
-          <div className="flex w-[200%] sm:w-[max-content] animate-marquee hover:[animation-play-state:paused]">
+          <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
             {[1, 2].map((set) => (
               <div key={set} className="flex gap-6 px-3">
                 {[
