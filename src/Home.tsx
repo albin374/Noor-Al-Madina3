@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import BoomerangVideoBg from './BoomerangVideoBg';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck, TrendingUp, Globe, Truck, Headset, Link as LinkIcon, Briefcase } from 'lucide-react';
 
 const CountUpNumber = ({ end, duration = 2000, suffix = "" }: { end: number, duration?: number, suffix?: string }) => {
   const [count, setCount] = useState(0);
@@ -64,9 +64,9 @@ export default function Home() {
 
   return (
     <main className="relative w-full">
-      <section className="relative w-full min-h-screen sm:h-screen overflow-hidden">
+      <section className="relative w-full min-h-[100dvh] sm:h-screen overflow-hidden">
         <BoomerangVideoBg src={BG_VIDEO} className="absolute inset-0 w-full h-full" />
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-[100dvh] sm:min-h-0 sm:h-full text-center px-4 sm:px-6">
           <h1
             className="font-normal leading-[0.95] text-[#336443] text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.75rem] xl:text-[5.25rem] max-w-5xl"
             style={{ fontFamily: '"Neue Haas Grotesk Display Pro 55 Roman", "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif', letterSpacing: '-0.035em' }}
@@ -187,6 +187,53 @@ export default function Home() {
                     </div>
                   </div>
                 ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="relative w-full py-24 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src="https://images.unsplash.com/photo-1751606803218-67f4b896fc4e?w=1600&q=80&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Why Choose Us Background" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-[#1f2a1d]/85 mix-blend-multiply" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20">
+          <div className="lg:w-1/3 text-left flex flex-col justify-center">
+            <h2 className="text-sm font-semibold tracking-widest text-[#85AB8B] uppercase mb-4">Why Choose Us</h2>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl font-medium text-white leading-tight mb-8" style={{ letterSpacing: '-0.02em' }}>
+              The Noor Al Madina Advantage
+            </h3>
+            <p className="text-white/70 text-lg leading-relaxed mb-8">
+              We combine deep industry expertise with a robust global network to deliver unparalleled quality and reliability in plastic trading. Partner with us for a seamless supply chain experience.
+            </p>
+            <div>
+              <Link to="/contact" className="inline-flex items-center gap-2 bg-[#85AB8B] hover:bg-white text-[#1f2a1d] font-semibold px-6 py-3 rounded-full transition-colors duration-300">
+                Partner with us <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+          
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+            {[
+              { title: "Quality Assured", icon: ShieldCheck, desc: "Rigorous testing and certified supply." },
+              { title: "Competitive Pricing", icon: TrendingUp, desc: "Market-leading rates globally." },
+              { title: "Global Sourcing", icon: Globe, desc: "Direct from top manufacturers." },
+              { title: "Fast Delivery", icon: Truck, desc: "Optimized logistics and shipping." },
+              { title: "Technical Support", icon: Headset, desc: "24/7 expert material consulting." },
+              { title: "Reliable Supply Chain", icon: LinkIcon, desc: "Uninterrupted bulk supply operations." },
+              { title: "Industry Expertise", icon: Briefcase, desc: "Over a decade of trading excellence." }
+            ].map((feature, i) => (
+              <div key={i} className="flex items-start gap-5 p-4 rounded-2xl hover:bg-white/5 transition-colors duration-300 group border border-transparent hover:border-white/10">
+                <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-[#85AB8B] group-hover:bg-[#85AB8B] group-hover:text-[#1f2a1d] transition-colors duration-300 shadow-sm mt-1">
+                  <feature.icon className="w-5 h-5" />
+                </div>
+                <div className="flex flex-col text-left">
+                  <h4 className="text-white font-semibold text-lg mb-1">{feature.title}</h4>
+                  <p className="text-white/60 text-sm leading-relaxed">{feature.desc}</p>
+                </div>
               </div>
             ))}
           </div>
